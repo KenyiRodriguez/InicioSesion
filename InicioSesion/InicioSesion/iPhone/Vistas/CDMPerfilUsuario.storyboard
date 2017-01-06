@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="4jb-HU-mPH">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Perfil Usuario View Controller-->
+        <scene sceneID="5gg-DT-jPZ">
+            <objects>
+                <viewController storyboardIdentifier="CDMPerfilUsuarioViewController" id="4jb-HU-mPH" customClass="CDMPerfilUsuarioViewController" customModule="InicioSesion" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kFv-eM-gOU"/>
+                        <viewControllerLayoutGuide type="bottom" id="h7t-4D-GQL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mtE-U2-IQR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H12-zy-K2j">
+                                <rect key="frame" x="16" y="71" width="245" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AHN-sY-orl">
+                                <rect key="frame" x="16" y="114" width="245" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qFX-9c-h5r">
+                                <rect key="frame" x="16" y="160" width="245" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xVa-La-fzQ">
+                                <rect key="frame" x="59" y="530" width="203" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="aIh-D9-zKB"/>
+                                </constraints>
+                                <state key="normal" title="Cerrar sesión"/>
+                                <connections>
+                                    <action selector="tapCerrarTeclado:" destination="4jb-HU-mPH" eventType="touchUpInside" id="HRf-t0-1Fl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="h7t-4D-GQL" firstAttribute="top" secondItem="xVa-La-fzQ" secondAttribute="bottom" constant="8" id="Jd7-7n-Pgt"/>
+                            <constraint firstAttribute="trailing" secondItem="xVa-La-fzQ" secondAttribute="trailing" constant="58" id="USN-61-w1a"/>
+                            <constraint firstItem="xVa-La-fzQ" firstAttribute="leading" secondItem="mtE-U2-IQR" secondAttribute="leading" constant="59" id="h6b-yJ-Rlh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lblApellido" destination="AHN-sY-orl" id="zed-nE-NT9"/>
+                        <outlet property="lblCorreo" destination="qFX-9c-h5r" id="MaC-Ch-ADt"/>
+                        <outlet property="lblNombre" destination="H12-zy-K2j" id="vAD-0z-fP0"/>
+                        <segue destination="Ss7-IL-nul" kind="presentation" identifier="CDMLoginViewController" id="R9y-FY-URP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m1O-uE-SSB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-161" y="145"/>
+        </scene>
+        <!--CDMLoginViewController-->
+        <scene sceneID="tov-AF-ks5">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CDMLogin" referencedIdentifier="CDMLoginViewController" id="Ss7-IL-nul" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vaP-Vm-sp2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="598" y="145"/>
+        </scene>
+    </scenes>
+</document>
